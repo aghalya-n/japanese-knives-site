@@ -16,7 +16,7 @@ In this programming assignment, you will design and implement a single-page webs
 
 #### Requirements
 
-Your webpage will have to implement the features listed below. Note that the examples are only meant to illustrate the features. You do not have to make you webpage look similar to the examples. You just have to incorporate that feature in some form.
+Your webpage will have to implement the features listed below. Note that the examples are only meant to illustrate the features. You do not have to make your webpage look similar to the examples. You just have to incorporate that feature in some form.
 
 1. Layout: All content must be laid out in a single page with full-width horizontal stripes/sections including a header and a footer - [Example](https://uiuc-web-programming.gitlab.io/sp20/images/mp1/2.png)
 2. Sticky Navbar: A top navigation bar that sticks to the top of the window when scrolling - [Example](https://uiuc-web-programming.gitlab.io/sp20/images/mp1/3.gif)
