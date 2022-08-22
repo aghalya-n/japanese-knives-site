@@ -1,5 +1,5 @@
 # MP #1: One Web Page To Rule Them All
-### Due: September 29, 11.59PM CDT
+### Due: September 28, 11.59PM CDT
 
 ## Table of Contents
 1. [Assignment](#assignment)
