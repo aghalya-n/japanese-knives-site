@@ -4,7 +4,7 @@
   "description": "CS498RK MP1",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; webpack"
   },
   "author": "UIUC Web Programming Staff",
   "license": "ISC",
