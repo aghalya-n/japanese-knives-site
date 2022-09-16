@@ -86,4 +86,8 @@ git remote add origin git@gitlab.com:<your-gitlab-username>/mp1.git
 3. Commit and push your local changes to this new repository.
 4. `.gitlab-ci.yml` file automatically makes a Gitlab CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://<your-gitlab-username>.gitlab.io/mp1`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
 5. Invite `uiucwp` as a collaborator. This should be as a **reporter**, not as a *guest*, otherwise we can't see your code.
-6. Fill out and submit the form [here](https://forms.gle/dXJGdWNDr8TE2bZY6)
+6. Make a video (3 minutes max) demo-ing your deployed website and upload it to Google Drive. Share it with `uiuc.web.programming@gmail.com` and put the share link in the google form.
+  - Show the url to prove you are on your deployed website. Then show all the requirement features you fulfilled in your mp.
+  - If you were unable to deploy your website, you can demo your mp locally for some point deduction (hard capped at 80%)
+    - Just make sure you do `git status` and `git log` first so we can see your last edits.
+7. Fill out and submit the form [here](https://forms.gle/aWm1JDajcHC7HkwG7)
