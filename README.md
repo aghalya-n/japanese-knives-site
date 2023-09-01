@@ -90,7 +90,7 @@ git remote add origin git@gitlab.com:<your-gitlab-username>/mp1.git
   - Show the url to prove you are on your deployed website. Then show all the requirement features you fulfilled in your mp.
   - If you were unable to deploy your website, you can demo your mp locally for some point deduction (hard capped at 80%)
     - Just make sure you do `git status` and `git log` first so we can see your last edits.
-7. Fill out and submit the form [here](https://forms.gle/aWm1JDajcHC7HkwG7)
+7. Fill out and submit the form [here](https://forms.gle/MtwcF3W8TdTbPw5y9)
 
 ## Large Language Model (LLM) Usage Policy
 
