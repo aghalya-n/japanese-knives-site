@@ -1,1 +1,390 @@
 /* Your SCSS here. */
+$light-color:rgb(231, 221, 204); // var for beige color
+$dark-color:rgb(52, 31, 2); // var for dark brown color
+
+// html, body, h1, h2, h3, p, ul, li, a {
+//     margin: 0;
+//     padding: 0;
+// }
+
+html {
+    // max-width: 100%;
+    margin: 0;
+    padding: 0;
+    // overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(137, 74, 64);
+    color: $light-color;
+    overflow-y: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    // width: 100vw;
+    // height: 100vh;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+.p-italics {
+    font-weight: 700;
+    font-style: italic;
+}
+
+// main {
+//     // width: 100vw;
+//     // height: 100vh;
+//     max-width: 100%;
+//     margin: 0;
+// }
+
+.hero {
+    color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    font-size: 2em;
+    // z-index: 100;
+    // opacity: 1;
+}
+
+header {
+    background-color: $dark-color;
+    color: $light-color;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar {
+    display: flex;
+    padding: 1em;
+    transition: padding .4s, font-size .4s;
+    // color: $light-color;
+    justify-content: space-around;
+    align-items: center;
+    // z-index: 100;
+    max-width: 100%;
+    
+}
+
+.nav-sects {
+    display: flex;
+    gap: 2%;
+    list-style: none;
+    align-items: center;
+    // overflow: auto;
+}
+
+.nav-sects a {
+    text-decoration: none;
+    color: $light-color;
+    font-size: 1em;
+    padding-right: .4em;
+    font-weight: 500;
+    // float: right;
+    // text-align: center;
+}
+
+.nav-sects li {
+    padding: 1%;
+    margin: 0;
+    white-space: nowrap;
+    // float: right;
+}
+
+.title {
+    transition: .4s;
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    padding: .5em;
+    // float: left;
+}
+
+// section {
+//     padding: 0px;
+//     margin: 0px;
+// }
+
+.nav-sects a.active {
+    color: $dark-color;
+    background-color: $light-color;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#navbar a:hover {
+    color: $dark-color;
+    background-color: rgb(231, 221, 204, .5);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#img-background {
+    background-image: url('../assets/background-img.png');
+    background-size: cover; // always fit the whole div
+    padding: 200px 30px;
+    opacity: 0.65;
+    background-attachment: fixed;
+    // padding-top: 25px;
+    // min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    // #navbar {
+    //     padding: 0px !important;
+    // }
+    .nav-sects {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav-sects a {
+        // padding: 0.5rem 0;
+        margin-right: 10px;
+        font-size: .8em;
+    }
+    .nav-sects a:last-child {
+        margin-right: 0;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    // #navbar {
+    //     padding: .5rem 5%;
+    //     overflow: auto;
+    // }
+    .modal {
+        width: 50%;
+        max-height: 55%;
+        padding: 10px;
+    }
+
+    // .modal-content {
+    //     max-width: 40%;
+    //     max-height: 40%;
+    // }
+}
+
+.carousel {
+    position: relative;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 4.5%;
+    padding-top: 1.5%;
+    // background-size: cover;
+    // height: auto;
+}
+
+.carousel-slides {
+    display: flex;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: $light-color;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(231,221,204,0.4);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.8s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.learn-more {
+    background-color: rgb(106, 57, 54);
+    padding-top: 2.5%;
+    text-align: center;
+    padding-bottom: 4%;
+    // align-items: center;
+}
+
+.learn-more p {
+    letter-spacing: 2px;
+}
+
+.multi-col-modal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: fit-content;
+}
+
+.col {
+    flex: 0 0 33.3%;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 50%;
+    top: 50%;
+    padding-top: 50px;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    // display: flex;
+    background-color: $light-color;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    position: relative;
+}
+
+.modal-caption {
+    color: $dark-color;
+    padding: 10px;
+    text-align: center;
+}
+
+.caption {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $dark-color;
+    color: $light-color;
+    padding: 8px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 30px;
+    cursor: pointer;
+    color: $dark-color;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.video-sect {
+    background-color: rgb(106, 72, 54);
+    text-align: center;
+    padding: 20px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+video {
+    border: 5px solid $dark-color;
+    max-width: 100%;
+}
+
+footer {
+    // width:100%;
+    padding: 20px;
+    background-color: $dark-color;
+    color: $light-color;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // gap: 10px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon i {
+    font-size: 2em;
+    padding: 3%;
+    color: $light-color;
+}
+
+.icon p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.fa-instagram::before {
+    content: "\f16d";
+}
+
+.fa-linkedIn::before {
+    content: "\f08c";
+}
+
+.fa-git::before {
+    content: "\f09b";
+}
