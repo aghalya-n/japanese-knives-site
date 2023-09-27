@@ -13,27 +13,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (targetSection) {
             const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY;
             const duration = 600;
-            const startY = window.pageYOffset;
-            const diff = targetOffset - startY - navbarHeight;
+            const startY = window.pageYOffset; // curr scroll position
+            const diff = targetOffset - startY - navbarHeight; // account for navbar height
             let start = null;
 
             // animate scroll
             function step(timestamp) {
                 if (!start) start = timestamp;
                 const progress = timestamp - start;
-                window.scrollTo(0, easeInOut(progress, startY, diff, duration));
+                window.scrollTo(0, easeInOut(progress, startY, diff, duration)); // easeInOut function to animate scroll
                 if (progress < duration) {
                     requestAnimationFrame(step);
                 }
             }
 
-            function easeInOut(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) {
-                    return c / 2 * t * t + b;
+            function easeInOut(time, start, change, duration) {
+                time /= duration / 2;
+                if (time < 1) {
+                    return change / 2 * time * time + start;
                 }
-                t--;
-                return (-c / 2 * (t * (t-2) - 1) + b);
+                time--;
+                return (-change / 2 * (time * (time-2) - 1) + start);
             }
 
             window.scrollTo({
@@ -53,8 +53,8 @@ window.onscroll = function() { scrollFunction() };
 function scrollFunction() {
     const navbar = document.getElementById("navbar");
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-        navbar.style.padding = "1.5% .5%";
-        navbar.style.fontSize = ".8em";
+        navbar.style.padding = "1.5% .5%"; // responsive padding
+        navbar.style.fontSize = ".8em"; // responsive font size
     } else {
         navbar.style.padding = "2% .5%";
         navbar.style.fontSize = "1em";
