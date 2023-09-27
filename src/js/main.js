@@ -128,7 +128,7 @@ function showSlides(n) {
         slides[i].style.display = "none"; 
     }
                   
-    slides[slideIndex].style.display = "block"; 
+    slides[slideIndex].style.display = "block";
 }
 
 // modal images
