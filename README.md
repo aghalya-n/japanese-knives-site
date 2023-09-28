@@ -9,3 +9,9 @@ Features include:
   - Designed layout/color palette/typography
   - responsive sizing
   - modal images, multi-column section
+
+demo:
+
+https://github.com/aghalya-n/japanese-knives-site/assets/92762103/fb5849f0-44ab-4f37-9436-4f60cce55cf9
+
+
